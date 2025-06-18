@@ -3,13 +3,11 @@ import Listing from "../models/Listing.js";
 
 export const fetchAndStoreListings = async (req, res) => {
     const { customerId } = req.params;
-    console.log(`📦 Fetching listings for customer: ${customerId}`);
   
     if (!customerId) return res.status(400).json({ error: "Missing customerId" });
   
     try {
       const { data } = await axios.get(`https://etsy-test.onrender.com/api/listings/${customerId}`);
-      console.log(`🔍 Retrieved ${data.length} listings from Etsy API`);
   
       const newListings = [];
   
@@ -29,17 +27,15 @@ export const fetchAndStoreListings = async (req, res) => {
               
               
           newListings.push(saved);
-          console.log(`✅ Inserted listingId: ${listing.listingId}`);
         } else {
             console.log(`⏭️ Skipped existing listingId: ${listing.listing_id}`);
+
 
         }
       }
   
-      console.log(`📝 Total new listings inserted: ${newListings.length}`);
       res.json({ inserted: newListings.length });
     } catch (err) {
-      console.error("❌ Failed to fetch or store listings:", err.message);
       res.status(500).json({ error: err.message });
     }
   };
