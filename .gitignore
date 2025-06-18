@@ -1,34 +1,36 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# 🔧 Node & Frontend dependencies
+**/node_modules/
 
-# testing
-/coverage
+# 🧪 Test coverage
+**/coverage/
 
-# next.js
-/.next/
-/out/
+# 🚀 Build outputs
+**/build/
+**/.next/
+**/out/
 
-# production
-/build
+# 📦 Package manager files
+.pnp*
+*.tsbuildinfo
+.next-env.d.ts
 
-# misc
-.DS_Store
-*.pem
+# 🔐 Env variables
+.env
+.env.*.local
+.env.local
 
-# debug
+# ⚠️ Logs & debug files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
-.env
+# 💻 System files
+.DS_Store
 
-# vercel
+# ▲ Vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts 
+# 💥 IDE stuff (optional but good)
+.vscode/
+.idea/
+*.swp
