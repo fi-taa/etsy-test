@@ -137,7 +137,7 @@ Then open the frontend and see the results!
 ## 👤 Author
 
 Made with ❤️ by Fita Wegene
-🌐 GitHub: [@yourhandle](https://github.com/fi-taa)
+🌐 GitHub: [@fi-taa](https://github.com/fi-taa)
 
 ---
 
